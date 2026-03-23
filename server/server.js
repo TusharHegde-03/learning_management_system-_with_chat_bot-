@@ -19,6 +19,7 @@ const authRoutes = require('./routes/authRoutes');
 const courseRoutes = require('./routes/courseRoutes');
 const lessonRoutes = require('./routes/lessonRoutes');
 const progressRoutes = require('./routes/progressRoutes');
+const chatbotRoutes = require('./routes/chatbotRoutes');
 
 // Connect to MongoDB
 connectDB();
@@ -56,6 +57,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/lessons', lessonRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 // Root test route
 app.get("/", (req, res) => {
